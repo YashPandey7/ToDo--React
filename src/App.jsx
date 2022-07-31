@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import List from './List';
 
 const App = () => {
 
     const [inputvalue , setinput] = useState('');
-    const [addedvalue , setaddedvalue] = useState('');
+    const [addedvalue , setaddedvalue] = useState([]);
     
     const inputevent = (event) =>{
         const value = event.target.value;
@@ -13,8 +14,9 @@ const App = () => {
 
     const submit = (event) => {
         event.preventDefault();
-        setaddedvalue(inputvalue);
+        setaddedvalue([...addedvalue ,inputvalue]);
     }
+
 
     return(
         <>
@@ -24,21 +26,26 @@ const App = () => {
                 
                     <form onSubmit={submit}>
                        <div className='input' style={{float:'left'}}>
-                            <input type='text' placeholder='Enter Items to add' class="form-control" onChange={inputevent} value={inputvalue}/>
+                            <input type='text' placeholder='Enter Items to add' className="form-control" onChange={inputevent} value={inputvalue}/>
                         </div>
                         <div className='submitbtn'>
-                            <button type="submit" class="btn btn-primary active" style={{width:'13%'}}> + </button>
+                            <button type="submit" className="btn btn-primary active" style={{width:'13%'}}> + </button>
                         </div>
                     </form><br/>
 
                     <div className='list'>
                         <ol className="list-group list-group-flush">
-                            <li className="list-group-item list-group-item-action">{addedvalue}</li>
                             
+                            {addedvalue.map(
+                                function nlist(val){
+                                    return(
+                                        <>
+                                            <List listvalue={val}/>
+                                        </>
+                                    );
+                                }
+                            )}
                             
-                            {/* <li className="list-group-item list-group-item-action">orange</li>
-                            <li className="list-group-item list-group-item-action">orange</li>
-                            <li className="list-group-item list-group-item-action">orange</li> */}
                         </ol>
                     </div>
                     
