@@ -8,13 +8,15 @@ const App = () => {
     
     const inputevent = (event) =>{
         const value = event.target.value;
-
         setinput(value);
     }
 
     const submit = (event) => {
         event.preventDefault();
-        setaddedvalue([...addedvalue ,inputvalue]);
+        setaddedvalue((olditems) => {
+            return [...olditems , inputvalue];
+        });
+        setinput('');
     }
 
 
@@ -26,7 +28,7 @@ const App = () => {
                 
                     <form onSubmit={submit}>
                        <div className='input' style={{float:'left'}}>
-                            <input type='text' placeholder='Enter Items to add' className="form-control" onChange={inputevent} value={inputvalue}/>
+                            <input type='text' placeholder='Enter Items to add' className="form-control" onChange={inputevent} value={inputvalue} required/>
                         </div>
                         <div className='submitbtn'>
                             <button type="submit" className="btn btn-primary active" style={{width:'13%'}}> + </button>
@@ -36,11 +38,10 @@ const App = () => {
                     <div className='list'>
                         <ol className="list-group list-group-flush">
                             
-                            {addedvalue.map(
-                                function nlist(val){
+                            {addedvalue.map((val ,index) => {
                                     return(
                                         <>
-                                            <List listvalue={val}/>
+                                            <List listvalue={val} showindex={index+1} />
                                         </>
                                     );
                                 }
