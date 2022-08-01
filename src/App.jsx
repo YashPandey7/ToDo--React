@@ -38,16 +38,16 @@ const App = () => {
                     <h1 className='heading'>ToDo List</h1>
                 
                     <form onSubmit={submit}>
-                       <div className='input ' style={{float:'left'}}>
-                            <input type='text' placeholder='Enter Items to add' className="form-control" onChange={inputevent} value={inputvalue} required/>
-                        </div>
-                        <div className='submitbtn'>
-                            <button type="submit" className="btn btn-primary active" style={{padding:'5px 8px 3px 8px'}}>
+                       <span className='input' style={{float:'left'}}>
+                            <input type='text' placeholder='Enter Items to add' className="form-control " onChange={inputevent} value={inputvalue} required/>
+                        </span>
+                        <span className='submitbtn'>
+                            <button type="submit" className="btn btn-primary active" style={{float:'right'}}>
                                 <span className="material-symbols-outlined">
                                     add
                                 </span>
                             </button>
-                        </div>
+                        </span>
                     </form><br/>
 
                     <div className='list'>

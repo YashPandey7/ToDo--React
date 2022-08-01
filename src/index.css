@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap');
+
+
 *{
     box-sizing: border-box;
 }
@@ -18,11 +21,11 @@
 .heading {
     text-align: center;
     margin: 20px 0px;
+    font-family: 'Assistant', sans-serif;
 }
 
 .input{
-    width:80%;
-    margin-right: 5%;
+    width:85%;
 }
 
 button{
@@ -33,22 +36,41 @@ button:hover{
     box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.4), 2px 4px 12px 0 rgba(0, 0, 0, 0.25);
 }
 
+.abc{
+    width:70%;
+}
+
 
 @media only screen and (max-width: 1200px) {
     .a{
         width:50% ;
     }
+    .input{
+        width:80%;
+    }
   }
 
   @media only screen and (max-width: 700px) {
     .a{
-        width:70% ;
+        width:75% ;
+    }
+    .input{
+        width:80%;
     }
   }
 
   @media only screen and (max-width: 450px) {
+    .a{
+        width:82%;
+    }
     .input{
-        width:80%;
-        margin-right: 2%;
+        width:75%;
+    }
+
+    .abc{
+        width:65%;
+    }
+    button{
+        padding:2px;
     }
   }
