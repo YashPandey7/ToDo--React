@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/YashPandey7/ToDo--React.git/static/css/main.cd72616b.css",
+    "main.js": "/YashPandey7/ToDo--React.git/static/js/main.bc8452be.js",
+    "index.html": "/YashPandey7/ToDo--React.git/index.html",
+    "main.cd72616b.css.map": "/YashPandey7/ToDo--React.git/static/css/main.cd72616b.css.map",
+    "main.bc8452be.js.map": "/YashPandey7/ToDo--React.git/static/js/main.bc8452be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd72616b.css",
+    "static/js/main.bc8452be.js"
+  ]
+}
