@@ -2,9 +2,7 @@ import React from 'react';
 
 const List = (props) => {
     
-    const deletebtn = () => {
-        console.log('deleted');
-    }
+    
 
     return (
         <>
@@ -21,7 +19,10 @@ const List = (props) => {
                     
                     
                     <div className='col-2'> 
-                        <button className="material-symbols-outlined btn btn-primary" style={{padding:'8px'}} onClick={deletebtn}>delete</button>  
+                        <button className="material-symbols-outlined btn btn-primary" style={{padding:'8px'}} 
+                        onClick={() => {
+                            props.delete(props.id)
+                        }}>delete</button>  
                     </div>
                     
                 </div>  

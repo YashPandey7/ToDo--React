@@ -19,6 +19,17 @@ const App = () => {
         setinput('');
     }
 
+    const deletebtn = (id) => {
+        // console.log('deleted');
+        // console.log(id);
+
+        setaddedvalue((olditems) => {
+            return olditems.filter((arr, index) => {
+                return index !== id ;
+            });
+        });
+
+    };
 
     return(
         <>
@@ -47,21 +58,15 @@ const App = () => {
                                         <>
                                             <List 
                                             key={index}
+                                            id={index}
                                             listvalue={val}
-                                            showindex={index+1} />
+                                            showindex={index+1} 
+                                            delete={deletebtn}
+                                            />
                                         </>
                                     );
                                 }
-                            )}
-
-                            {/* <li className="list-group-item list-group-flush"><span>Apple</span>
-                                <button className="material-symbols-outlined btn btn-primary button" style={{float:'right'}}>Delete</button>
-                            </li>
-                            <li className="list-group-item list-group-flush"><span>Apple</span>
-                                <button className="material-symbols-outlined btn btn-primary button" style={{float:'right'}}>Delete</button></li>
-
-                            <li className="list-group-item list-group-flush"><span>Applesadsadasdsdaasddasdsaasddasadsdasdasdsad</span><button className="material-symbols-outlined btn btn-primary button" style={{float:'right'}}>Delete</button></li> */}
-                            
+                            )}  
                         </ol>
                     </div>
                     
