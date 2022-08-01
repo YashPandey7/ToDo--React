@@ -19,7 +19,7 @@ const List = (props) => {
                     
                     
                     <div className='col-2'> 
-                        <button className="material-symbols-outlined btn btn-primary" style={{padding:'8px'}} 
+                        <button className="material-symbols-outlined btn btn-primary active" style={{padding:'8px'}} 
                         onClick={() => {
                             props.delete(props.id)
                         }}>delete</button>  
