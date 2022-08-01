@@ -42,7 +42,7 @@ const App = () => {
                             <input type='text' placeholder='Enter Items to add' className="form-control" onChange={inputevent} value={inputvalue} required/>
                         </div>
                         <div className='submitbtn'>
-                            <button type="submit" className="btn btn-primary" style={{padding:'5px 8px 3px 8px'}}>
+                            <button type="submit" className="btn btn-primary active" style={{padding:'5px 8px 3px 8px'}}>
                                 <span className="material-symbols-outlined">
                                     add
                                 </span>
